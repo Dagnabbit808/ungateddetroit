@@ -75,6 +75,7 @@ body {
 }
 
 /* Hero Section */
+.hero /* Hero Section */
 .hero {
     background:
         linear-gradient(135deg, rgba(29, 53, 87, 0.92) 0%, rgba(230, 57, 70, 0.88) 100%),
