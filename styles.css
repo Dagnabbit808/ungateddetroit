@@ -111,14 +111,39 @@ body {
 
 /* Hero Section */
 .hero {
-    background:
+    background-color: var(--dark-color);
+    background-image:
         linear-gradient(135deg, rgba(29, 53, 87, 0.15) 0%, rgba(230, 57, 70, 0.1) 100%),
-        url('hero-background.png') center/cover no-repeat;
+        url('hero-background.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--light-color);
     padding: 120px 20px 100px;
     text-align: center;
     position: relative;
-    background-attachment: fixed;
+    /* Force hardware acceleration on mobile */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Parallax only on desktop - doesn't work on mobile */
+@media (min-width: 769px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
+/* Mobile-specific background fixes */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+        background-position: center top;
+        /* Ensure background loads on iOS */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
 }
 
 .hero::before {
