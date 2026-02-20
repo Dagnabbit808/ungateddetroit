@@ -79,7 +79,7 @@ body {
 /* Hero Section */
 .hero {
     background:
-        linear-gradient(135deg, rgba(29, 53, 87, 0.45) 0%, rgba(230, 57, 70, 0.35) 100%),
+        linear-gradient(135deg, rgba(29, 53, 87, 0.15) 0%, rgba(230, 57, 70, 0.1) 100%),
         url('hero-background.png') center/cover no-repeat;
     color: var(--light-color);
     padding: 120px 20px 100px;
@@ -95,8 +95,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(29, 53, 87, 0.15);
-    backdrop-filter: blur(0.5px);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .hero-content {
