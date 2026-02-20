@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="email=no">
     <title>Ungated Detroit - Breaking Down Barriers in Art</title>
     <meta name="description" content="A group art exhibition celebrating works that challenge gatekeeping in religious, political, ideological, and AI-related themes. Metro Detroit, Michigan.">
     <meta property="og:title" content="Ungated Detroit - A Group Art Exhibition">
@@ -22,7 +23,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
-                <li><a href="#apply">Apply</a></li>
+                <li><a href="submit.html">Apply</a></li>
                 <li><a href="#donate">Donate</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -38,7 +39,7 @@
             <p class="tagline">Breaking Down Barriers in Art</p>
             <p class="subtitle">A group exhibition celebrating works that challenge gatekeeping in religious, political, ideological, and AI-related themes</p>
             <div class="cta-buttons">
-                <a href="#apply" class="btn btn-primary">Submit Your Work</a>
+                <a href="submit.html" class="btn btn-primary">Submit Your Work</a>
                 <a href="#donate" class="btn btn-secondary">Support the Exhibition</a>
             </div>
         </div>
@@ -49,7 +50,7 @@
             <h2>About Ungated</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p><strong>Ungated</strong> is a groundbreaking group art exhibition that provides a platform for works often excluded from traditional galleries due to their use of AI or exploration of controversial themes including religious expression, political commentary, and ideological inquiry.</p>
+                    <p><strong>Ungated</strong> is a groundbreaking group art exhibition that provides a platform for works often excluded from traditional galleries due to controversial themes including religious expression, political commentary, ideological inquiry, or AI use in composition.</p>
 
                     <p>We believe art should spark dialogue, challenge assumptions, and push boundaries—not be silenced by gatekeeping.</p>
 
@@ -118,184 +119,29 @@
 
     <section id="apply" class="section apply">
         <div class="container">
-            <h2>Artist Application</h2>
-            <p class="section-intro">Submit up to 3 individual artworks for consideration in this juried exhibition.</p>
-
-            <form id="artistForm" class="application-form" action="https://formspree.io/f/mjgeeovo" method="POST">
-                <h3 class="form-section-title">Artist Information</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="artistName">Full Name *</label>
-                        <input type="text" id="artistName" name="artistName" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" id="location" name="location" placeholder="City, State">
-                    </div>
+            <h2>Submit Your Work</h2>
+            <p class="section-intro">We're seeking bold artworks that challenge gatekeeping for this juried exhibition.</p>
+            
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center; background-color: var(--light-color); padding: 3rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                <h3 style="color: var(--dark-color); margin-bottom: 1rem;">Artist Application</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;"><strong>Submission Fee: $30</strong> (covers up to 3 artworks)</p>
+                <p style="margin-bottom: 2rem; line-height: 1.8;">Submit up to 3 individual artworks for consideration. Our jury will review all submissions and select works for this groundbreaking exhibition.</p>
+                
+                <a href="submit.html" class="btn btn-primary btn-large">Start Your Application</a>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background-color: var(--secondary-color); border-radius: var(--border-radius);">
+                    <h4 style="color: var(--dark-color); margin-bottom: 1rem;">What You'll Need:</h4>
+                    <ul style="list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 0 auto;">
+                        <li style="padding: 0.5rem 0;">✓ Artist information & statement</li>
+                        <li style="padding: 0.5rem 0;">✓ Details for 1-3 artworks</li>
+                        <li style="padding: 0.5rem 0;">✓ High-quality images of your work</li>
+                        <li style="padding: 0.5rem 0;">✓ $30 submission fee payment</li>
+                    </ul>
                 </div>
-
-                <div class="form-group">
-                    <label for="portfolio">Portfolio/Website</label>
-                    <input type="url" id="portfolio" name="portfolio" placeholder="https://...">
-                </div>
-
-                <div class="form-group">
-                    <label for="statement">Artist Statement *</label>
-                    <textarea id="statement" name="statement" rows="4" placeholder="Tell us about your artistic practice and what dialogue you hope to spark with your work" required></textarea>
-                </div>
-
-                <!-- Artwork 1 -->
-                <h3 class="form-section-title">Artwork 1 (Required)</h3>
-                <div class="artwork-section">
-                    <div class="form-group">
-                        <label for="work1Title">Work Title *</label>
-                        <input type="text" id="work1Title" name="work1Title" required>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="work1Medium">Medium *</label>
-                            <input type="text" id="work1Medium" name="work1Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="work1Dimensions">Dimensions</label>
-                            <input type="text" id="work1Dimensions" name="work1Dimensions" placeholder="Height x Width x Depth">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work1Theme">Primary Theme *</label>
-                        <select id="work1Theme" name="work1Theme" required>
-                            <option value="">Select a theme...</option>
-                            <option value="ai">AI Art</option>
-                            <option value="religious">Religious/Spiritual</option>
-                            <option value="political">Political</option>
-                            <option value="ideological">Ideological Provocation</option>
-                            <option value="multiple">Multiple Themes</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work1Description">Work Description *</label>
-                        <textarea id="work1Description" name="work1Description" rows="4" placeholder="Describe this piece and its themes" required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work1Image">Upload Image *</label>
-                        <input type="file" id="work1Image" name="work1Image" accept="image/*" required>
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
-                    </div>
-                </div>
-
-                <!-- Artwork 2 -->
-                <h3 class="form-section-title">Artwork 2 (Optional)</h3>
-                <div class="artwork-section">
-                    <div class="form-group">
-                        <label for="work2Title">Work Title</label>
-                        <input type="text" id="work2Title" name="work2Title">
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="work2Medium">Medium</label>
-                            <input type="text" id="work2Medium" name="work2Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="work2Dimensions">Dimensions</label>
-                            <input type="text" id="work2Dimensions" name="work2Dimensions" placeholder="Height x Width x Depth">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work2Theme">Primary Theme</label>
-                        <select id="work2Theme" name="work2Theme">
-                            <option value="">Select a theme...</option>
-                            <option value="ai">AI Art</option>
-                            <option value="religious">Religious/Spiritual</option>
-                            <option value="political">Political</option>
-                            <option value="ideological">Ideological Provocation</option>
-                            <option value="multiple">Multiple Themes</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work2Description">Work Description</label>
-                        <textarea id="work2Description" name="work2Description" rows="4" placeholder="Describe this piece and its themes"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work2Image">Upload Image</label>
-                        <input type="file" id="work2Image" name="work2Image" accept="image/*">
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
-                    </div>
-                </div>
-
-                <!-- Artwork 3 -->
-                <h3 class="form-section-title">Artwork 3 (Optional)</h3>
-                <div class="artwork-section">
-                    <div class="form-group">
-                        <label for="work3Title">Work Title</label>
-                        <input type="text" id="work3Title" name="work3Title">
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="work3Medium">Medium</label>
-                            <input type="text" id="work3Medium" name="work3Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="work3Dimensions">Dimensions</label>
-                            <input type="text" id="work3Dimensions" name="work3Dimensions" placeholder="Height x Width x Depth">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work3Theme">Primary Theme</label>
-                        <select id="work3Theme" name="work3Theme">
-                            <option value="">Select a theme...</option>
-                            <option value="ai">AI Art</option>
-                            <option value="religious">Religious/Spiritual</option>
-                            <option value="political">Political</option>
-                            <option value="ideological">Ideological Provocation</option>
-                            <option value="multiple">Multiple Themes</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work3Description">Work Description</label>
-                        <textarea id="work3Description" name="work3Description" rows="4" placeholder="Describe this piece and its themes"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="work3Image">Upload Image</label>
-                        <input type="file" id="work3Image" name="work3Image" accept="image/*">
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
-            </form>
-
-            <div id="formMessage" class="form-message"></div>
+            </div>
         </div>
     </section>
+
 
     <section id="donate" class="section donate">
         <div class="container">
@@ -392,7 +238,7 @@
                     <p>We'd love to hear from you. Whether you're an artist interested in submitting work, a potential donor, or just curious about the exhibition, reach out!</p>
 
                     <div class="contact-methods">
-                        <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#5e373038311e2b30393f2a3b3a3a3b2a2c31372a703d3133"><span class="__cf_email__" data-cfemail="553c3b333a15203b3234213031313021273a3c217b363a38">[email&#160;protected]</span></a></p>
+                        <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#41282f272e01342f2620352425252435332e28356f222e2c"><span class="__cf_email__" data-cfemail="20494e464f60554e4741544544444554524f49540e434f4d">[email&#160;protected]</span></a></p>
                         <p><strong>Website:</strong> <a href="https://ungateddetroit.com" target="_blank">ungateddetroit.com</a></p>
                         <p><strong>Location:</strong> Metro Detroit, Michigan</p>
                     </div>
