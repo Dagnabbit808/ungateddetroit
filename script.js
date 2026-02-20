@@ -16,39 +16,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const artistForm = document.getElementById('artistForm');
 const formMessage = document.getElementById('formMessage');
 
-artistForm.addEventListener('submit', function(e) {
+artistForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     // Get form data
     const formData = new FormData(artistForm);
-    const data = Object.fromEntries(formData);
 
-    // Display the collected data in console for now
-    console.log('Artist Application:', data);
-
-    // Show success message
-    formMessage.className = 'form-message success';
-    formMessage.textContent = 'Thank you for your submission! We\'ll review your application and get back to you within 2 weeks.';
+    // Show submitting message
+    formMessage.className = 'form-message';
+    formMessage.textContent = 'Submitting your application...';
     formMessage.style.display = 'block';
+    formMessage.style.backgroundColor = '#d1ecf1';
+    formMessage.style.color = '#0c5460';
 
-    // Reset form
-    artistForm.reset();
+    try {
+        // Submit to FormSpree
+        const response = await fetch(artistForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-    // Scroll to message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (response.ok) {
+            // Show success message
+            formMessage.className = 'form-message success';
+            formMessage.textContent = 'Thank you for your submission! We\'ll review your application and get back to you within 2 weeks.';
+            formMessage.style.backgroundColor = '#d4edda';
+            formMessage.style.color = '#155724';
 
-    // Hide message after 10 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 10000);
+            // Reset form
+            artistForm.reset();
 
-    // In a real application, you would send this data to a server
-    // Example:
-    // fetch('/api/submit-application', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // });
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide message after 15 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 15000);
+        } else {
+            // Show error message
+            const errorData = await response.json();
+            formMessage.className = 'form-message error';
+            formMessage.textContent = 'There was a problem submitting your application. Please try again or contact us directly at info@ungateddetroit.com';
+            formMessage.style.backgroundColor = '#f8d7da';
+            formMessage.style.color = '#721c24';
+            console.error('FormSpree error:', errorData);
+        }
+    } catch (error) {
+        // Show error message
+        formMessage.className = 'form-message error';
+        formMessage.textContent = 'There was a problem submitting your application. Please check your internet connection and try again.';
+        formMessage.style.backgroundColor = '#f8d7da';
+        formMessage.style.color = '#721c24';
+        console.error('Submission error:', error);
+    }
 });
 
 // Donation Form
@@ -111,27 +135,47 @@ donationForm.addEventListener('submit', function(e) {
 // Contact Form
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     // Get form data
     const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
 
-    console.log('Contact Form:', data);
+    // Disable submit button
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
-    // Show success message
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    try {
+        // Submit to FormSpree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-    // Reset form
-    contactForm.reset();
+        if (response.ok) {
+            // Show success message
+            alert('Thank you for your message! We\'ll get back to you soon.');
 
-    // In a real application:
-    // fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // });
+            // Reset form
+            contactForm.reset();
+        } else {
+            // Show error message
+            alert('There was a problem sending your message. Please try again or email us directly at info@ungateddetroit.com');
+        }
+    } catch (error) {
+        // Show error message
+        alert('There was a problem sending your message. Please check your internet connection and try again.');
+        console.error('Contact form error:', error);
+    } finally {
+        // Re-enable submit button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 // Progress bar update function (demonstration only)
