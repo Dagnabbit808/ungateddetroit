@@ -113,8 +113,10 @@
     <section id="apply" class="section apply">
         <div class="container">
             <h2>Artist Application</h2>
+            <p class="section-intro">Submit up to 3 individual artworks for consideration in this juried exhibition.</p>
 
             <form id="artistForm" class="application-form">
+                <h3 class="form-section-title">Artist Information</h3>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="artistName">Full Name *</label>
@@ -138,52 +140,148 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="workTitle">Work Title *</label>
-                    <input type="text" id="workTitle" name="workTitle" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="medium">Medium *</label>
-                    <input type="text" id="medium" name="medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dimensions">Dimensions</label>
-                    <input type="text" id="dimensions" name="dimensions" placeholder="Height x Width x Depth (if applicable)">
-                </div>
-
-                <div class="form-group">
-                    <label for="theme">Primary Theme *</label>
-                    <select id="theme" name="theme" required>
-                        <option value="">Select a theme...</option>
-                        <option value="ai">AI Art</option>
-                        <option value="religious">Religious/Spiritual</option>
-                        <option value="political">Political</option>
-                        <option value="ideological">Ideological Provocation</option>
-                        <option value="multiple">Multiple Themes</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Work Description *</label>
-                    <textarea id="description" name="description" rows="4" placeholder="Tell us about your work and why it's been gatekept or considered controversial" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="statement">Artist Statement *</label>
-                    <textarea id="statement" name="statement" rows="4" placeholder="Why is this work important to you? What dialogue do you hope to spark?" required></textarea>
-                </div>
-
-                <div class="form-group">
                     <label for="portfolio">Portfolio/Website</label>
                     <input type="url" id="portfolio" name="portfolio" placeholder="https://...">
                 </div>
 
                 <div class="form-group">
-                    <label for="images">Upload Images of Your Work *</label>
-                    <input type="file" id="images" name="images" accept="image/*" multiple required>
-                    <small>Upload up to 5 images (JPG, PNG, or HEIC format). Max 10MB per image.</small>
+                    <label for="statement">Artist Statement *</label>
+                    <textarea id="statement" name="statement" rows="4" placeholder="Tell us about your artistic practice and what dialogue you hope to spark with your work" required></textarea>
+                </div>
+
+                <!-- Artwork 1 -->
+                <h3 class="form-section-title">Artwork 1 (Required)</h3>
+                <div class="artwork-section">
+                    <div class="form-group">
+                        <label for="work1Title">Work Title *</label>
+                        <input type="text" id="work1Title" name="work1Title" required>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="work1Medium">Medium *</label>
+                            <input type="text" id="work1Medium" name="work1Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="work1Dimensions">Dimensions</label>
+                            <input type="text" id="work1Dimensions" name="work1Dimensions" placeholder="Height x Width x Depth">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work1Theme">Primary Theme *</label>
+                        <select id="work1Theme" name="work1Theme" required>
+                            <option value="">Select a theme...</option>
+                            <option value="ai">AI Art</option>
+                            <option value="religious">Religious/Spiritual</option>
+                            <option value="political">Political</option>
+                            <option value="ideological">Ideological Provocation</option>
+                            <option value="multiple">Multiple Themes</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work1Description">Work Description *</label>
+                        <textarea id="work1Description" name="work1Description" rows="4" placeholder="Describe this piece and its themes" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work1Image">Upload Image *</label>
+                        <input type="file" id="work1Image" name="work1Image" accept="image/*" required>
+                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <h3 class="form-section-title">Artwork 2 (Optional)</h3>
+                <div class="artwork-section">
+                    <div class="form-group">
+                        <label for="work2Title">Work Title</label>
+                        <input type="text" id="work2Title" name="work2Title">
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="work2Medium">Medium</label>
+                            <input type="text" id="work2Medium" name="work2Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="work2Dimensions">Dimensions</label>
+                            <input type="text" id="work2Dimensions" name="work2Dimensions" placeholder="Height x Width x Depth">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work2Theme">Primary Theme</label>
+                        <select id="work2Theme" name="work2Theme">
+                            <option value="">Select a theme...</option>
+                            <option value="ai">AI Art</option>
+                            <option value="religious">Religious/Spiritual</option>
+                            <option value="political">Political</option>
+                            <option value="ideological">Ideological Provocation</option>
+                            <option value="multiple">Multiple Themes</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work2Description">Work Description</label>
+                        <textarea id="work2Description" name="work2Description" rows="4" placeholder="Describe this piece and its themes"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work2Image">Upload Image</label>
+                        <input type="file" id="work2Image" name="work2Image" accept="image/*">
+                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <h3 class="form-section-title">Artwork 3 (Optional)</h3>
+                <div class="artwork-section">
+                    <div class="form-group">
+                        <label for="work3Title">Work Title</label>
+                        <input type="text" id="work3Title" name="work3Title">
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="work3Medium">Medium</label>
+                            <input type="text" id="work3Medium" name="work3Medium" placeholder="e.g., AI-generated digital art, mixed media, oil on canvas">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="work3Dimensions">Dimensions</label>
+                            <input type="text" id="work3Dimensions" name="work3Dimensions" placeholder="Height x Width x Depth">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work3Theme">Primary Theme</label>
+                        <select id="work3Theme" name="work3Theme">
+                            <option value="">Select a theme...</option>
+                            <option value="ai">AI Art</option>
+                            <option value="religious">Religious/Spiritual</option>
+                            <option value="political">Political</option>
+                            <option value="ideological">Ideological Provocation</option>
+                            <option value="multiple">Multiple Themes</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work3Description">Work Description</label>
+                        <textarea id="work3Description" name="work3Description" rows="4" placeholder="Describe this piece and its themes"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work3Image">Upload Image</label>
+                        <input type="file" id="work3Image" name="work3Image" accept="image/*">
+                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
@@ -288,7 +386,7 @@
                     <p>We'd love to hear from you. Whether you're an artist interested in submitting work, a potential donor, or just curious about the exhibition, reach out!</p>
 
                     <div class="contact-methods">
-                        <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#5b32353d341b2e353c3a2f3e3f3f3e2f2934322f75383436"><span class="__cf_email__" data-cfemail="9df4f3fbf2dde8f3fafce9f8f9f9f8e9eff2f4e9b3fef2f0">[email&#160;protected]</span></a></p>
+                        <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#99f0f7fff6d9ecf7fef8edfcfdfdfcedebf6f0edb7faf6f4"><span class="__cf_email__" data-cfemail="8fe6e1e9e0cffae1e8eefbeaebebeafbfde0e6fba1ece0e2">[email&#160;protected]</span></a></p>
                         <p><strong>Website:</strong> <a href="https://ungateddetroit.com" target="_blank">ungateddetroit.com</a></p>
                         <p><strong>Location:</strong> Metro Detroit, Michigan</p>
                     </div>

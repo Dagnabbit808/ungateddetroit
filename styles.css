@@ -371,12 +371,32 @@ body {
 }
 
 .application-form {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background-color: var(--light-color);
     padding: 3rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+}
+
+.form-section-title {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.artwork-section {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-color);
 }
 
 .form-grid {
