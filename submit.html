@@ -114,6 +114,17 @@
                     <p style="font-size: 0.95rem; color: #666;">After completing payment, return here to submit your application form below.</p>
                 </div>
 
+                <!-- Instructions -->
+                <div class="payment-status" style="background-color: #e7f3ff; border-left: 4px solid #1d3557; margin-bottom: 2rem;">
+                    <h4 style="margin-top: 0; color: var(--dark-color);">📸 How to Share Your Artwork Images:</h4>
+                    <ol style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.8;">
+                        <li>Upload your images to <strong>Google Drive</strong>, <strong>Dropbox</strong>, or any image hosting service</li>
+                        <li>Set sharing permissions to "Anyone with the link can view"</li>
+                        <li>Copy the shareable link</li>
+                        <li>Paste the link in the "Image Link" field for each artwork below</li>
+                    </ol>
+                </div>
+
                 <!-- Artist Information -->
                 <h3 class="form-section-title">Step 2: Artist Information</h3>
                 <div class="form-grid">
@@ -175,9 +186,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="work1Image">Upload Image *</label>
-                        <input type="file" id="work1Image" name="work1Image" accept="image/*" required>
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                        <label for="work1Image">Image Link *</label>
+                        <input type="url" id="work1Image" name="work1Image" placeholder="https://..." required>
+                        <small>Upload your image to Google Drive, Dropbox, or any image host and paste the shareable link here.</small>
                     </div>
                 </div>
 
@@ -207,9 +218,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="work2Image">Upload Image</label>
-                        <input type="file" id="work2Image" name="work2Image" accept="image/*">
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                        <label for="work2Image">Image Link</label>
+                        <input type="url" id="work2Image" name="work2Image" placeholder="https://...">
+                        <small>Upload your image to Google Drive, Dropbox, or any image host and paste the shareable link here.</small>
                     </div>
                 </div>
 
@@ -239,9 +250,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="work3Image">Upload Image</label>
-                        <input type="file" id="work3Image" name="work3Image" accept="image/*">
-                        <small>JPG, PNG, or HEIC format. Max 10MB.</small>
+                        <label for="work3Image">Image Link</label>
+                        <input type="url" id="work3Image" name="work3Image" placeholder="https://...">
+                        <small>Upload your image to Google Drive, Dropbox, or any image host and paste the shareable link here.</small>
                     </div>
                 </div>
 
