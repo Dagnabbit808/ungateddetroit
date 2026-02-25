@@ -27,22 +27,16 @@ if (artistForm) {
             });
 
             if (response.ok) {
-                // Show success message
+                // Show brief success message
                 formMessage.className = 'form-message success';
-                formMessage.textContent = 'Thank you for your submission! We\'ll review your application and get back to you within 2 weeks.';
+                formMessage.textContent = 'Submission successful! Redirecting...';
                 formMessage.style.backgroundColor = '#d4edda';
                 formMessage.style.color = '#155724';
 
-                // Reset form
-                artistForm.reset();
-
-                // Scroll to message
-                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                // Hide message after 15 seconds
+                // Redirect to thank you page after 1 second
                 setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 15000);
+                    window.location.href = 'thanks.html';
+                }, 1000);
             } else {
                 // Show error message
                 const errorData = await response.json();

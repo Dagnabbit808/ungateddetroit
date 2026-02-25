@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="email=no">
+    <title>Thank You - Ungated Detroit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thank-you-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light-color) 100%);
+            padding: 40px 20px;
+        }
+
+        .thank-you-content {
+            max-width: 700px;
+            text-align: center;
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .thank-you-content h1 {
+            color: var(--primary-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease-in-out;
+        }
+
+        .checkmark svg {
+            width: 50px;
+            height: 50px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            animation: drawCheck 0.5s ease-in-out 0.3s forwards;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .thank-you-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-box ul {
+            margin: 1rem 0 0 1.5rem;
+            line-height: 1.8;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .thank-you-content h1 {
+                font-size: 2rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="ungated-icon.png" alt="Ungated Logo" class="logo-icon">
+                <span class="logo-text">Ungated- Seeking diversity of artistic expressions and mediums</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="submit.html">Apply</a></li>
+                <li><a href="index.html#donate">Donate</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <div class="checkmark">
+                <svg viewBox="0 0 52 52">
+                    <path d="M14 27l8 8 16-16"/>
+                </svg>
+            </div>
+
+            <h1>Thank You!</h1>
+            <p><strong>Your application has been successfully submitted.</strong></p>
+            <p>We've received your submission and are excited to review your work!</p>
+
+            <div class="info-box">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li><strong>Confirmation:</strong> Check your email for a submission confirmation (check spam folder if needed)</li>
+                    <li><strong>Payment:</strong> If you haven't already, please complete the $30 submission fee via the payment link</li>
+                    <li><strong>Review:</strong> Our jury will carefully review all submissions after the deadline</li>
+                    <li><strong>Notification:</strong> You'll hear back from us within 2 weeks with the jury's decision</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="border-left-color: var(--accent-color);">
+                <h3>Payment Reminder</h3>
+                <p style="margin: 0;">If you haven't completed your $30 submission fee payment, please do so now. Your submission will only be reviewed after payment is confirmed.</p>
+                <a href="https://buy.stripe.com/3cI14n0qG1zacdn9Dx7kc01" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;" target="_blank">Complete Payment</a>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #666; margin-top: 2rem;">
+                Questions? Contact us at <a href="/cdn-cgi/l/email-protection#60090e060f20150e0701140504040514120f09144e030f0d" style="color: var(--primary-color);"><span class="__cf_email__" data-cfemail="30595e565f70455e5751445554545544425f59441e535f5d">[email&#160;protected]</span></a>
+            </p>
+
+            <div class="button-group">
+                <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                <a href="index.html#donate" class="btn btn-primary">Support with a Donation</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ungated Exhibition. All rights reserved.</p>
+            <p>Breaking down barriers, one artwork at a time.</p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
